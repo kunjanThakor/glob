@@ -1,0 +1,53 @@
+
+.container-xxl {
+    background-color: #f8f9fa; /* Light background color */
+    padding-top: 100px; /* Adjust as needed */
+    padding-bottom: 100px; /* Adjust as needed */
+}
+
+.section-title {
+    color: #007bff; /* Primary color */
+}
+
+.img-fluid {
+    border-radius: 10px; /* Rounded corners for images */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Shadow effect */
+}
+
+.text-start {
+    text-align: left; /* Align text to left */
+}
+
+.text-primary {
+    color: #007bff; /* Primary color */
+}
+
+.text-secondary {
+    color: #6c757d; /* Secondary color */
+}
+
+.ff-secondary {
+    font-family: Arial, sans-serif; /* Secondary font */
+}
+
+h1, h4 {
+    color: #343a40; /* Text color */
+}
+
+p {
+    color: #6c757d; /* Text color */
+}
+
+/* Optional: Animation effect */
+@keyframes zoomIn {
+    from {
+        transform: scale(0);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+.wow {
+    animation-duration: 0.5s; /* Animation duration */
+}
