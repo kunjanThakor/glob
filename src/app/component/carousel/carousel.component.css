@@ -2,9 +2,8 @@
 .carousel-item img {
     width: 100%;
     height: auto;
-    /* Ensures the image maintains aspect ratio */
-    max-height: 600px;
-    /* Adjust this value to your desired height */
+    max-height: 400px;
+    /* Adjust the max-height for responsiveness */
 }
 
 .carousel-caption {
@@ -18,7 +17,6 @@
     display: flex;
     justify-content: center;
     gap: 10px;
-    /* Adds some space between the buttons */
 }
 
 .animated {
@@ -68,5 +66,27 @@
 
     to {
         transform: translate3d(0, 0, 0);
+    }
+}
+
+/* Adjust button sizes */
+.btn {
+    font-size: 1rem;
+    /* Adjust button font size */
+    padding: 0.5rem 1.5rem;
+    /* Adjust button padding */
+}
+
+@media (max-width: 768px) {
+    .carousel-caption {
+        padding: 10px;
+        /* Reduce padding on smaller screens */
+    }
+
+    .btn {
+        font-size: 0.8rem;
+        /* Reduce button font size on smaller screens */
+        padding: 0.3rem 1rem;
+        /* Reduce button padding on smaller screens */
     }
 }
