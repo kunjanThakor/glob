@@ -93,14 +93,14 @@
 
 @media (max-width: 576px) {
     .carousel-caption h1 {
-        font-size: 24px;
-    }
-
-    .carousel-caption h6 {
         font-size: 18px;
     }
 
+    .carousel-caption h6 {
+        font-size: 14px;
+    }
+
     .carousel-caption p {
-        font-size: 12px;
+        font-size: 9px;
     }
 }
