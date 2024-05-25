@@ -1,18 +1,21 @@
-/* carousel.component.css */
 .carousel-item img {
     width: 100%;
     height: auto;
     max-height: 600px;
-    /* Adjust the max-height for responsiveness */
     object-fit: cover;
-    /* Ensures the image covers the entire container */
 }
 
 .carousel-caption {
-    background: none;
-    /* Remove the overlay */
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    /* Add a semi-transparent background for better readability */
     padding: 20px;
     border-radius: 10px;
+    text-align: center;
+    width: 90%;
+    margin: auto;
 }
 
 .carousel-caption .btn-container {
@@ -71,41 +74,33 @@
     }
 }
 
-/* Adjust button sizes */
 .btn {
     font-size: 1rem;
-    /* Adjust button font size */
     padding: 0.5rem 1.5rem;
-    /* Adjust button padding */
 }
 
 @media (max-width: 768px) {
     .carousel-caption {
         padding: 10px;
-        /* Reduce padding on smaller screens */
+        width: 95%;
     }
 
     .btn {
         font-size: 0.8rem;
-        /* Reduce button font size on smaller screens */
         padding: 0.3rem 1rem;
-        /* Reduce button padding on smaller screens */
     }
 }
 
 @media (max-width: 576px) {
     .carousel-caption h1 {
         font-size: 2rem;
-        /* Adjust h1 font size for smaller screens */
     }
 
     .carousel-caption h6 {
         font-size: 0.9rem;
-        /* Adjust h6 font size for smaller screens */
     }
 
     .carousel-caption p {
         font-size: 0.8rem;
-        /* Adjust paragraph font size for smaller screens */
     }
 }
