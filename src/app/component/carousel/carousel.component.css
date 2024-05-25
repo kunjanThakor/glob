@@ -81,12 +81,12 @@
 
 @media (max-width: 768px) {
     .carousel-caption {
-        padding: 10px;
+        padding: 10px !important;
         /* Reduce padding on smaller screens */
     }
 
     .btn {
-        font-size: 0.8rem;
+        font-size: 0.8rem !important;
         /* Reduce button font size on smaller screens */
         padding: 0.3rem 1rem;
         /* Reduce button padding on smaller screens */
