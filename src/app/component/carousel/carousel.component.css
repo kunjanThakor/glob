@@ -81,7 +81,7 @@
 
 @media (max-width: 768px) {
     .carousel-caption {
-        padding: 10px !important;
+        padding: 10px
         /* Reduce padding on smaller screens */
     }
 
@@ -95,17 +95,17 @@
 
 @media (max-width: 576px) {
     .carousel-caption h1 {
-        font-size: 2rem;
+        font-size: 0.9rem;
         /* Adjust h1 font size for smaller screens */
     }
 
     .carousel-caption h6 {
-        font-size: 0.9rem;
+        font-size: 0.4rem;
         /* Adjust h6 font size for smaller screens */
     }
 
     .carousel-caption p {
-        font-size: 0.8rem;
+        font-size: 0.3rem;
         /* Adjust paragraph font size for smaller screens */
     }
 }
