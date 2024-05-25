@@ -92,3 +92,20 @@
         /* Reduce button padding on smaller screens */
     }
 }
+
+@media (max-width: 576px) {
+    .carousel-caption h1 {
+        font-size: 2rem;
+        /* Adjust h1 font size for smaller screens */
+    }
+
+    .carousel-caption h6 {
+        font-size: 0.9rem;
+        /* Adjust h6 font size for smaller screens */
+    }
+
+    .carousel-caption p {
+        font-size: 0.8rem;
+        /* Adjust paragraph font size for smaller screens */
+    }
+}
