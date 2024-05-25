@@ -1,21 +1,21 @@
 .carousel-item img {
     width: 100%;
     height: auto;
-    max-height: 800px;
+    max-height: 600px;
     object-fit: cover;
 }
 
 .carousel-caption {
     position: absolute;
     top: 50%;
-    transform: translateY(-50%);
-    /* background: rgba(0, 0, 0, 0.5); */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.5);
     /* Add a semi-transparent background for better readability */
     padding: 20px;
     border-radius: 10px;
     text-align: center;
     width: 90%;
-    margin: auto;
 }
 
 .carousel-caption .btn-container {
@@ -92,21 +92,15 @@
 }
 
 @media (max-width: 576px) {
-    .carousel-caption {
-        height: auto;
-        padding: 5px;
-        margin: 5px;
-
-    }
     .carousel-caption h1 {
-        font-size: 18px !important;
+        font-size: 2rem;
     }
 
     .carousel-caption h6 {
-        font-size: 14px !important;
+        font-size: 0.9rem;
     }
 
     .carousel-caption p {
-        font-size: 9px !important;
+        font-size: 0.8rem;
     }
 }
