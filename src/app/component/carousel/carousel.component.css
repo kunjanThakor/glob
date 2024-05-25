@@ -121,16 +121,16 @@
     .carousel-caption {
         height: auto;
         padding: 5px;
-        margin-top: 10px;
+        margin-top: 30px;
 
     }
 
     .carousel-caption h1 {
-        font-size: 18px !important;
+        font-size: 14px !important;
     }
 
     .carousel-caption h6 {
-        font-size: 14px !important;
+        font-size: 12px !important;
     }
 
     .carousel-caption p {
