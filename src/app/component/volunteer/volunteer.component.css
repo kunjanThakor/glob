@@ -34,7 +34,7 @@
 }*/
 
 .shadow-custom {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    box-shadow: -4px 0 8px rgba(0, 0, 0, 0.2), 4px 0 8px rgba(0, 0, 0, 0.2), 0 -4px 8px rgba(0, 0, 0, 0.2), 0 4px 8px rgba(0, 0, 0, 0.2) !important;
     border-radius: 10px;
     background-color: #fff;
     padding: 20px;
@@ -55,13 +55,13 @@
     color: white;
 }
 
-.carousel-control-prev-icon:after {
+/* .carousel-control-prev-icon:after {
     content: '‹';
 }
 
 .carousel-control-next-icon:after {
     content: '›';
-}
+} */
 
 .carousel-item .testimonial-text {
     text-align: center;
