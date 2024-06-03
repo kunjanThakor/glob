@@ -1,0 +1,114 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <!-- Left side content -->
+            <div class="col-md-10 w-100">
+                <div class="content">
+                    <div class="mw-100 ">
+                        <h2 class="impact-title">BE PART OF THE SOCIAL IMPACT</h2>
+                        <p class="impact-text">Your donation will make a difference for each orphan and youth’s
+                            brighter
+                            future.</p>
+                        <p class="impact-text fw-semibold">For each individual donation of 5000 or more, we provide free
+                            Web &
+                            Mobile Application training.</p>
+                        <div class="text-center"> <!-- Added a div with text-center class -->
+                            <img src="../../../assets/handdonation.png" alt="donation.jpeg">
+                        </div>
+                        <p class="impact-text">All donations are eligible for 50% tax exemption benefits under section
+                            80G as we are registered as a non-profit organization.</p>
+                        <p class="impact-text mt-4">Pan: AAKCG9535D &nbsp; 80G: AAKCG9535DF20241</p>
+                        <div class="mt-4">
+                            <p class="impact-text">Share on</p>
+                            <div class="share-icons">
+                                <a href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:4200/donation"
+                                    target="_blank" class="text-dark me-3">
+                                    <i class="bi bi-facebook"></i>
+                                </a>
+                                <a href="https://wa.me/?text=Check%20out%20this%20page:%20http://localhost:4200/donation"
+                                    target="_blank" class="text-success me-3">
+                                    <i class="bi bi-whatsapp"></i>
+                                </a>
+                                <a href="https://twitter.com/intent/tweet?url=http://localhost:4200/donation&text=Check%20out%20this%20page!"
+                                    target="_blank" class="text-info">
+                                    <i class="bi bi-twitter"></i>
+                                </a>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <!-- Right side content -->
+            <div class="card">
+                <div class="card-body">
+                    <h2 class="card-title">Payment Details</h2>
+
+                    <form #donationForm="ngForm" (ngSubmit)="onSubmit(donationForm)">
+                        <div class="form-group">
+                            <label for="fullName">Name</label>
+                            <input type="text" id="fullName" name="fullName" class="form-control" ngModel required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="fullAddress">Address</label>
+                            <input type="text" id="fullAddress" name="fullAddress" class="form-control" ngModel
+                                required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="contactNumber">Contact Number</label>
+                            <input type="tel" id="contactNumber" name="contactNumber" class="form-control" ngModel
+                                required pattern="[6-9][0-9]{9}">
+                            <!-- Add contact number pattern validation -->
+                            <div *ngIf="donationForm.controls['contactNumber'].errors?.['pattern'] && donationForm.controls['contactNumber'].touched"
+                                class="text-danger">
+                                Invalid contact number
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" class="form-control" ngModel required
+                                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+                            <!-- Add email pattern validation -->
+                            <div *ngIf="donationForm.controls['email'].errors?.['pattern'] && donationForm.controls['email'].touched"
+                                class="text-danger">
+                                Invalid email
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="panNumber">PAN Number</label>
+                            <input type="text" id="panNumber" name="panNumber" class="form-control" ngModel required
+                                pattern="[A-Z]{5}[0-9]{4}[A-Z]{1}">
+                            <!-- Add PAN number pattern validation -->
+                            <div *ngIf="donationForm.controls['panNumber'].errors?.['pattern'] && donationForm.controls['panNumber'].touched"
+                                class="text-danger">
+                                Invalid PAN number
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="amount">Amount</label>
+                            <input type="number" id="amount" name="amount" class="form-control" ngModel required
+                                min="500">
+                            <!-- Add minimum amount validation -->
+                            <div *ngIf="donationForm.controls['amount'].errors?.['min'] && donationForm.controls['amount'].touched"
+                                class="text-danger">
+                                Minimum amount should be 500
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary mt-4 full-width-button"
+                            [disabled]="donationForm.invalid">Donate Now</button>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

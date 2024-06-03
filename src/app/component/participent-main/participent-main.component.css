@@ -1,0 +1,134 @@
+/* Default styles */
+body {
+    padding-bottom: 30px;
+    position: relative;
+    min-height: 100%;
+}
+
+a {
+    transition: background 0.2s, color 0.2s;
+}
+
+a:hover,
+a:focus {
+    text-decoration: none;
+}
+
+#navbar-wrapper {
+    width: 100%;
+    position: absolute;
+    z-index: 2;
+}
+
+#wrapper {
+    padding-left: 0;
+    transition: all 0.5s ease;
+    position: relative;
+}
+
+#sidebar-wrapper {
+    z-index: 1000;
+    position: fixed;
+    left: 0;
+    width: 250px;
+    height: 100%;
+    overflow-y: auto;
+    /* overflow-x: hidden; */
+    background: #222;
+    transition: all 0.5s ease;
+}
+
+.sidebar-brand {
+    position: absolute;
+    top: 0;
+    width: 250px;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.sidebar-brand h2 {
+    margin: 0;
+    font-weight: 600;
+    font-size: 24px;
+    color: #fff;
+}
+
+.sidebar-nav {
+    position: absolute;
+    top: 75px;
+    width: 250px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.sidebar-nav>li {
+    text-indent: 10px;
+    line-height: 42px;
+}
+
+.sidebar-nav>li a {
+    display: block;
+    text-decoration: none;
+    color: #757575;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.sidebar-nav>li>a:hover,
+.sidebar-nav>li.active>a {
+    text-decoration: none;
+    color: #fff;
+    background: #F8BE12;
+}
+
+.sidebar-nav>li>a i.fa {
+    font-size: 24px;
+    width: 60px;
+}
+
+#content-wrapper {
+    width: calc(100% - 250px);
+    /* Adjust the width based on your sidebar width */
+    position: absolute;
+    padding: 15px;
+    top: 100px;
+    transition: all 0.5s ease;
+}
+
+@media (max-width: 768px) {
+    #sidebar-wrapper {
+        width: 0;
+    }
+
+    #wrapper.toggled #sidebar-wrapper {
+        width: 250px;
+    }
+
+    #wrapper.toggled #content-wrapper {
+        width: 100%;
+        left: 0;
+    }
+}
+
+.sidebar-toggle {
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    display: none;
+    /* Initially hidden */
+    z-index: 1000;
+    /* Ensure button appears above other elements */
+}
+
+@media (max-width: 992px) {
+    .sidebar-toggle {
+        display: block;
+        /* Show toggle button on smaller and medium screens */
+    }
+}
+
+/* Rest of your CSS */
+main {
+    margin-top: -91px;
+}

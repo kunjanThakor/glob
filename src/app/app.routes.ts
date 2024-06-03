@@ -21,32 +21,92 @@ import { CodingonwheelComponent } from './component/codingonwheel/codingonwheel.
 import { CodingeducationComponent } from './component/codingeducation/codingeducation.component';
 import { WomenempowermentComponent } from './component/womenempowerment/womenempowerment.component';
 import { CodingpageComponent } from './component/codingpage/codingpage.component';
+import { ParticipentMainComponent } from './component/participent-main/participent-main.component';
+// import { AdminNavComponent } from './component/admin-nav/admin-nav.component';
+import { MaiComponentComponent } from './component/mai-component/mai-component.component';
+import { AdminHomeComponent } from './AdminComponent/admin-home/admin-home.component';
+import { AdminGallaryComponent } from './AdminComponent/admin-gallary/admin-gallary.component';
+import { AdminUsersComponent } from './AdminComponent/admin-users/admin-users.component';
+import { AdminAllParticipantComponent } from './AdminComponent/admin-all-participant/admin-all-participant.component';
+import { ManageAdminComponent } from './AdminComponent/manage-admin/manage-admin.component';
+import { AppComponent } from './app.component';
+import { GalleryComponent } from './component/gallery/gallery.component';
+import path from 'path';
+import { ViewGallaryComponent } from './AdminComponent/view-gallary/view-gallary.component';
+import { DonationComponent } from './component/donation/donation.component';
+// import { AdminGallaryComponent } from './component/admin-gallary/admin-gallary.component';
+// import { AdminDashboardComponent } from './component/admin-dashboard/admin-dashboard.component';
 
 export const routes: Routes = [
-    {path: "", component: HomeComponent},
-    {path: "aboutmain",component: AboutmainComponent},
-    {path: "mainprogram",component: MainprogramComponent},
-    {path: "maincompaign",component: MaincompaignComponent},
-    {path: "mainresources",component: MainresourcesComponent},
-    {path: "getinvolved",component: GetinvolvedComponent},
-    {path: "page",component: PageComponent},
-    {path: "contact",component: ContactComponent},
-    {path:"program",component:MainprogramComponent},
+    // { path: "", component: HomeComponent },
+    // { path: "aboutmain", component: AboutmainComponent },
+    // { path: "mainprogram", component: MainprogramComponent },
+    // { path: "maincompaign", component: MaincompaignComponent },
+    // { path: "mainresources", component: MainresourcesComponent },
+    // { path: "getinvolved", component: GetinvolvedComponent },
+    // { path: "page", component: PageComponent },
+    // { path: "contact", component: ContactComponent },
+    // { path: "program", component: MainprogramComponent },
 
-    {path: "vission",component:VisionComponent},
-    {path:"mission",component:MissionComponent},
-    {path:"value",component:ValuesComponent},
-    {path:"approach",component:ApproachComponent},
-    {path:"team",component:TeamComponent},
-    {path:"advisory",component:AdvisoryBoardComponent},
+    // { path: "vission", component: VisionComponent },
+    // { path: "mission", component: MissionComponent },
+    // { path: "value", component: ValuesComponent },
+    // { path: "approach", component: ApproachComponent },
+    // { path: "team", component: TeamComponent },
+    // { path: "advisory", component: AdvisoryBoardComponent },
 
-    {path:"login",component:LoginComponent},
-    {path:"registration",component:RegistrationComponent},
+    // { path: "login", component: LoginComponent },
+    // { path: "registration", component: RegistrationComponent },
 
-    {path:"codingonwheel",component:CodingonwheelComponent},
-    {path:"codingeducation",component:CodingeducationComponent},
-    {path:"womenempowerment",component:WomenempowermentComponent},
-    
-    {path:"codingpage",component:CodingpageComponent},
+    // { path: "codingonwheel", component: CodingonwheelComponent },
+    // { path: "codingeducation", component: CodingeducationComponent },
+    // { path: "womenempowerment", component: WomenempowermentComponent },
+
+    // { path: "codingpage", component: CodingpageComponent },
+    {
+        path: "", component: MaiComponentComponent,
+        children: [
+            { path: "", component: HomeComponent },
+            // { path: "donation", component: DonateComponent },
+            { path: "home", component: HomeComponent },
+            { path: "about", component: AboutmainComponent },
+            { path: "contact", component: ContactComponent },
+            { path: "donation", component: DonationComponent },
+
+            // { path: "blog", component: BlogComponent },
+            // { path: "single-blog", component: SingleBlogComponent },
+            // // { path: "page-elemet", component: ElementPageComponent },
+            // { path: "page-cause", component: CausePageComponent },
+            // { path: "contact", component: ContactComponent },
+            // { path: "volunteer", component: VolunteersComponent },
+            // { path: "reason", component: AddreasonsComponent },
+            // { path: "user", component: UserComponent },
+            { path: "gallary", component: GalleryComponent },
+            { path: "login", component: LoginComponent },
+            { path: "registration", component: RegistrationComponent },
+
+        ]
+    },
+
+    {
+        path: 'participentMain', component: ParticipentMainComponent,
+        children: [
+            { path: 'dashboard', component: LoginComponent },
+            // { path: 'newuser', component: NewuserComponent },
+        ]
+    },
+    {
+        path: 'admin', component: AdminHomeComponent,
+        children: [
+            { path: 'adminhome', component: AdminHomeComponent },
+            { path: 'gallary', component: AdminGallaryComponent },
+            { path: 'viewgallary', component: ViewGallaryComponent },
+            { path: 'adminusers', component: AdminUsersComponent },
+            { path: 'adminallparticipant', component: AdminAllParticipantComponent },
+            { path: 'manageadmin', component: ManageAdminComponent },
+            { path: 'logout', component: HomeComponent },
+
+        ]
+    },
 
 ];
