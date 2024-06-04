@@ -1,0 +1,17 @@
+<div class="container">
+    <div class="card my-5">
+        <div class="card-body">
+            <h5 class="card-title">Upload Image</h5>
+
+            <div class="mb-3">
+                <label for="fileInput" class="form-label">Select Image</label>
+                <input type="file" class="form-control" id="fileInput" (change)="onFileSelected($event)"
+                    accept="image/*">
+            </div>
+            <button type=" button" class="btn btn-primary" [disabled]="!selectedFile"
+                (click)="uploadImage()">Upload</button>
+
+        </div>
+
+    </div>
+</div>

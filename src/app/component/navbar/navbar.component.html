@@ -14,8 +14,8 @@
             <div class="h-100 d-inline-flex align-items-center">
                 <a class="btn btn-sm-square bg-white text-primary me-1"
                     routerLink="https://www.facebook.com/your_facebook_page"><i class="fab fa-facebook-f"></i></a>
-                <a class="btn btn-sm-square bg-white text-primary me-1" routerLink="globtechpowerfoundation&#64;gmail.com"><i
-                        class="fa fa-envelope"></i></a>
+                <a class="btn btn-sm-square bg-white text-primary me-1"
+                    routerLink="globtechpowerfoundation&#64;gmail.com"><i class="fa fa-envelope"></i></a>
                 <a class="btn btn-sm-square bg-white text-primary me-1"
                     routerLink="https://www.linkedin.com/company/glob-techpower-foundation/"><i
                         class="fab fa-linkedin-in"></i></a>
@@ -73,7 +73,7 @@
                 <a routerLink="/mainresources" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Resources</a>
                 <div class="dropdown-menu fade-up m-0">
                     <a routerLink="/mainresources" class="dropdown-item">Media</a>
-                    <a routerLink="quote.html" class="dropdown-item">Gallary</a>
+                    <a routerLink="/gallary" class="dropdown-item">Gallary</a>
                     <a routerLink="team.html" class="dropdown-item">Annual Report</a>
                     <a routerLink="testimonial.html" class="dropdown-item">Publication</a>
                 </div>
@@ -89,16 +89,13 @@
                 </div>
             </div>
             <a routerLink="/contact" class="nav-item nav-link">Contact</a>
-        </div>
-        <div class="dropdown">
-            <button class="btn btn-primary dropdown-toggle py-4 px-lg-5" type="button" id="enrollDropdown"
-                data-bs-toggle="dropdown" aria-expanded="false">
-                Enroll
-            </button>
-            <ul class="dropdown-menu" aria-labelledby="enrollDropdown">
-                <li><a class="dropdown-item" routerLink="/login">Login</a></li>
-                <li><a class="dropdown-item" routerLink="/registration">Sign Up</a></li>
-            </ul>
+            <div class="nav-item dropdown">
+                <a routerLink="#" class="nav-link dropdown-toggle " data-bs-toggle="dropdown">Enroll Now</a>
+                <div class="dropdown-menu fade-up m-0">
+                    <a class="dropdown-item" routerLink="/login">Login</a>
+                    <a class="dropdown-item" routerLink="/registration">Sign Up</a>
+                </div>
+            </div>
         </div>
     </div>
 </nav>

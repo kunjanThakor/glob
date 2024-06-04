@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 900px;
+    margin: 20px auto;
+    font-family: "Poppins", sans-serif;
+
+}
+
+img {
+    height: 150px;
+}
+
+.content {
+    flex: 1;
+    padding-right: 20px;
+}
+
+.card-container {
+    flex: 1;
+}
+
+.card {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-body {
+    padding: 20px;
+}
+
+.card-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-top: 20px;
+}
+
+.impact-card {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.impact-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.impact-text {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.impact-title {
+    position: relative;
+    display: inline-block;
+}
+
+.impact-title::after {
+    content: "";
+    position: absolute;
+    bottom: -15px;
+    /* Adjust this value as needed */
+    left: 0;
+    width: 25%;
+    height: 5px;
+    /* Adjust this value as needed */
+    background-color: #528ff0;
+    display: block;
+}
+
+.text-danger {
+    margin-top: 10px;
+}
+
+.bi {
+    font-size: 20px;
+    margin-left: 10px;
+}
+
+.bi-e {
+    font-size: 20px;
+    margin-bottom: 1px;
+}
+
+.contacts a {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.contacts a i {
+    margin-right: 5px;
+    /* Adjust as needed */
+}
+
+
+
+.fs-6 {
+    color: rgb(20, 77, 2);
+    font-weight: 300;
+    font-size: small !important;
+}
+
+.full-width-button {
+    width: 100%;
+    background-color: #5fc77b;
+    border-color: #5fc77b;
+}
+
+/* Hide spinner arrows on number input */
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+    /* Firefox */
+}
