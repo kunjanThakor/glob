@@ -25,11 +25,12 @@
               "src/assets"
             ],
             "styles": [
+              "@angular/material/prebuilt-themes/indigo-pink.css",
               "src/assets/lib/animate/animate.min.css",
               "src/assets/lib/owlcarousel/assets/owl.carousel.min.css",
               "src/assets/lib/lightbox/css/lightbox.min.css",
-               "src/assets/css/bootstrap.min.css",
-                "src/assets/css/style.css"
+              "src/assets/css/bootstrap.min.css",
+              "src/assets/css/style.css"
             ],
             "scripts": [
               "src/assets/lib/wow/wow.min.js",
@@ -101,6 +102,7 @@
               "src/assets"
             ],
             "styles": [
+              "@angular/material/prebuilt-themes/indigo-pink.css",
               "src/styles.css",
               "src/assets/lib/animate/animate.min.css",
               "src/assets/lib/lightbox/css/lightbox.min.css",
