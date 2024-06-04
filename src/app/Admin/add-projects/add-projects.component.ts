@@ -7,7 +7,6 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { Validator, NG_VALIDATORS, AbstractControl, ValidationErrors } from '@angular/forms';
 import Swal from 'sweetalert2'
-import { CurrentDateValidatorDirective } from '../../current-date.directive';
 // import { response } from 'express';
 
 @Component({
