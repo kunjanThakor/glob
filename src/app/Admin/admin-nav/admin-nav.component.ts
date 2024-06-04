@@ -20,8 +20,11 @@ export class AdminNavComponent implements OnInit {
   constructor(private router: Router, private participantService: ParticipantService, private pdf: ProjectService) { }
   ngOnInit(): void {
     console.log(localStorage.getItem('role'));
-    if (localStorage.getItem('role') != "ROLE_ADMIN") {
-      window.location.href = "/"
+    if (typeof localStorage !== 'undefined') {
+      if (localStorage.getItem('role') != "ROLE_ADMIN") {
+        window.location.href = "/"
+      }
+      // Access localStorage here
     }
     this.participantService.getUserCount().subscribe(res => this.counter = res);
   }
