@@ -1,149 +1,76 @@
-.carousel-item img {
-    width: 100%;
-    height: auto;
-    max-height: 600px;
-    object-fit: cover;
+.slider {
+    position: relative;
+    overflow: hidden;
 }
 
-.carousel-caption {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    /* background: rgba(0, 0, 0, 0.5); */
-    /* Add a semi-transparent background for better readability */
-    padding: 20px;
-    border-radius: 10px;
-    text-align: center;
-    width: 90%;
+.slider-item {
+    display: none;
 }
 
-.carousel-caption h1 {
-    font-size: 24px !important;
+.slider-item.active {
+    display: block;
 }
 
-.carousel-caption h6 {
-    font-size: 18px !important;
-}
-
-.carousel-caption p {
-    font-size: 19px !important;
-}
-
-.carousel-caption .btn-container {
+.overlay {
     display: flex;
     justify-content: center;
-    gap: 10px;
-    flex-wrap: wrap;
+    align-items: center;
 }
 
-.animated {
-    animation-duration: 1s;
-    animation-fill-mode: both;
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
-.slideInDown {
-    animation-name: slideInDown;
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
 }
 
-.slideInLeft {
-    animation-name: slideInLeft;
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
 }
 
-.slideInRight {
-    animation-name: slideInRight;
-}
 
-@keyframes slideInDown {
-    from {
-        transform: translate3d(0, -100%, 0);
-        visibility: visible;
-    }
-
-    to {
-        transform: translate3d(0, 0, 0);
-    }
-}
-
-@keyframes slideInLeft {
-    from {
-        transform: translate3d(-100%, 0, 0);
-        visibility: visible;
-    }
-
-    to {
-        transform: translate3d(0, 0, 0);
-    }
-}
-
-@keyframes slideInRight {
-    from {
-        transform: translate3d(100%, 0, 0);
-        visibility: visible;
-    }
-
-    to {
-        transform: translate3d(0, 0, 0);
-    }
-}
-
-.btn {
-    font-size: 0.9rem;
-    padding: 0.3rem 0.9rem;
+.full-width-img {
+    width: 100%;
+    height: auto;
 }
 
 @media (max-width: 768px) {
-    .carousel-caption {
-        padding: 10px;
-        height: auto;
-        width: 95%;
+    .slider .slider-item {
+        position: relative !important;
+        min-height: 500px !important;
     }
 
-    .btn {
-        font-size: 0.8rem;
-        padding: 0.3rem 1rem;
+    .slider .slider-item img {
+        position: absolute !important;
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover !important;
     }
 
-    .carousel-caption h1 {
-        font-size: 24px !important;
-    }
-
-    .carousel-caption h6 {
-        font-size: 18px !important;
-    }
-
-    .carousel-caption p {
-        font-size: 19px !important;
-    }
-}
-
-@media (max-width: 576px) {
-    .carousel-caption {
-        height: auto;
-        padding: 5px;
-        margin-top: 30px;
-
-    }
-
-    .carousel-caption h1 {
+    .slider .slider-item h5,
+    .slider .slider-item p {
         font-size: 14px !important;
+        font-weight: 400 !important;
     }
 
-    .carousel-caption h6 {
-        font-size: 12px !important;
-    }
-
-    .carousel-caption p {
-        font-size: 9px !important;
-    }
-
-    .btn-container {
-        gap: 5px;
-    }
-
-    .btn {
-        font-size: 14px;
-        padding: 0.2rem 0.2rem;
-        margin-bottom: 100px;
+    .slider .slider-item h1 {
+        font-size: 30px !important;
+        font-weight: 600 !important;
     }
 }

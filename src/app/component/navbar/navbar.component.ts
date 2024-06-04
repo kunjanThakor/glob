@@ -15,5 +15,8 @@ import { GalleryComponent } from '../gallery/gallery.component';
   styleUrl: './navbar.component.css'
 })
 export class NavbarComponent {
+  loadWindow() {
+    window.location.reload();
+  }
 
 }
