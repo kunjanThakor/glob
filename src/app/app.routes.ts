@@ -44,8 +44,8 @@ import { DisplayProjectComponent } from './Admin/display-project/display-project
 
 export const routes: Routes = [
     {
-        path: " ", component: MainhomeComponent, children: [
-            { path: " ", component: HomeComponent },
+        path: "", component: MainhomeComponent, children: [
+            { path: "", component: HomeComponent },
             { path: "aboutmain", component: AboutmainComponent },
             { path: "mainprogram", component: MainprogramComponent },
             { path: "maincompaign", component: MaincompaignComponent },
