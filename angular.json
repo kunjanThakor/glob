@@ -29,7 +29,7 @@
               "src/assets/lib/owlcarousel/assets/owl.carousel.min.css",
               "src/assets/lib/lightbox/css/lightbox.min.css",
                "src/assets/css/bootstrap.min.css",
-             "src/assets/css/style.css"
+                "src/assets/css/style.css"
             ],
             "scripts": [
               "src/assets/lib/wow/wow.min.js",
