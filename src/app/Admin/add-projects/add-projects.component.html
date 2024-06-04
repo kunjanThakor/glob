@@ -1,0 +1,32 @@
+<form #formGroup="ngForm" (ngSubmit)="onSubmit()">
+    <div class="mb-3">
+        <label for="title" class="form-label">Project Title</label>
+        <input type="text" name="title" id="title" class="form-control" [(ngModel)]="project.title" required />
+    </div>
+    <div class="mb-3">
+        <label for="description" class="form-label">Project Description</label>
+        <textarea name="description" id="description" class="form-control" rows="5"
+            [(ngModel)]="project.description" required></textarea>
+    </div>
+    <div class="mb-3">
+        <label for="image" class="form-label">Project Image</label>
+        <input type="file" name="image" id="image" class="form-control" accept="image/*"
+            (change)="onImageSelected($event)"required />
+    </div>
+    <div class="mb-3">
+        <label for="startingDate" class="form-label">Starting Date</label>
+        <input type="date" name="startingDate" id="startingDate" class="form-control"
+            [(ngModel)]="project.projectDetails.startingDate"required />
+    </div>
+    <div class="mb-3">
+        <label for="endingDate" class="form-label">Ending Date</label>
+        <input type="date" name="endingDate" id="endingDate" class="form-control"
+            [(ngModel)]="project.projectDetails.endingDate" required />
+    </div>
+    <div class="mb-3">
+        <div class="form-group d-flex justify-content-center">
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+    </div>
+
+</form>

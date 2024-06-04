@@ -1,0 +1,53 @@
+<div class="container-fluid">
+    <div class="row">
+        <nav class="col-3 sidebar bg-dark text-white fixed">
+            <ul class="nav flex-column">
+                <li class="nav-item">
+                    <a class="nav-link text-white user-select-none">
+                        Admin Dashbord</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" routerLink="/admin/gallary" data-content="profile">Gallary</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" routerLink="/admin/adminusers" data-content="settings">Approve User
+                        <label class="badge bg-primary"> <span class="align-middle">
+                                {{counter}}
+                            </span>
+                        </label></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" routerLink="/admin/addprojects">Add Project</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" routerLink="/admin/displayproject">View Project</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" routerLink="/admin/uploadnews">Upload News</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" routerLink="/admin/uploadVideo">Upload videos</a>
+                </li>
+                <!-- <li class="nav-item">
+                    <a class="nav-link text-white" routerLink="/admin/shownews">View news</a>
+                </li> -->
+                <li class="nav-item">
+                    <a class="nav-link text-white" routerLink="/admin/showvideo">View Videos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" routerLink="/admin" (click)="downloadPdf()">Download Report</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" routerLink="/admin/adminallparticipant"
+                        data-content="settings">Participants</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" routerLink="/" (click)="deleteStorage()" data-content="
+                        logout">Logout</a>
+                </li>
+
+            </ul>
+        </nav>
+
+    </div>
+</div>

@@ -1,0 +1,18 @@
+<div class="container">
+    <form (ngSubmit)="onSubmit()" #newsForm="ngForm" method="post" enctype="multipart/form-data">
+        <div class="mb-3">
+            <label for="title" class="form-label">Title</label>
+            <input type="text" class="form-control" id="title" required [(ngModel)]="news.title" name="title">
+        </div>
+        <div class="mb-3">
+            <label for="description" class="form-label">Description</label>
+            <textarea class="form-control" id="description" required [(ngModel)]="news.description"
+                name="description"></textarea>
+        </div>
+        <div class="mb-3">
+            <label for="file" class="form-label">File</label>
+            <input type="file" class="form-control-file" id="file" required (change)="onFileChange($event)">
+        </div>
+        <button type="submit" class="btn btn-primary">Upload</button>
+    </form>
+</div>

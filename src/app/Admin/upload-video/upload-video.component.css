@@ -1,0 +1,73 @@
+.upload-video-container {
+    max-width: 600px;
+    margin: auto;
+}
+
+.upload-video-container div {
+    margin-bottom: 15px;
+}
+
+.upload-video-container label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.upload-video-container input,
+.upload-video-container textarea,
+.upload-video-container button {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+
+.upload-video-container {
+    position: relative;
+}
+
+.spinner-border {
+    display: block;
+    margin: 10px auto;
+}
+
+.upload-video-container {
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9;
+}
+
+.upload-video-container .form-label {
+    font-weight: bold;
+}
+
+.upload-video-container .form-control {
+    border-radius: 5px;
+}
+
+.upload-video-container .btn {
+    width: 100%;
+    font-size: 16px;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.upload-video-container .btn:disabled {
+    background-color: #cccccc;
+}
+
+.upload-video-container .spinner-border {
+    display: block;
+    margin: 20px auto;
+    width: 3rem;
+    height: 3rem;
+    border-width: 0.3rem;
+}
+
+.upload-video-container .spinner-border.text-primary {
+    color: #007bff;
+}

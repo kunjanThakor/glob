@@ -1,0 +1,14 @@
+.container-fluid {
+    height: 100vh;
+    overflow-y: auto;
+}
+
+.col-2 {
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    /* overflow-y: auto; */
+    padding: 0;
+    color: white;
+}
