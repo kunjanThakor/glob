@@ -77,12 +77,9 @@ export const routes: Routes = [
             { path: "campaign1", component: Campaign1Component },
             { path: "campaign2", component: Campaign2Component },
             { path: "campaign", component: CampaignComponent },
-
             { path: "campaign1of1", component: Campaign1to1Component },
             { path: "campaign2of2", component: Campaign2to1Component },
-
             { path: "courses1", component: CourserPBPBComponent },
-
             { path: "women", component: WomenComponent }]
     },
     {
