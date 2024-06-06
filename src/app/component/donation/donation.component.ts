@@ -33,11 +33,11 @@ export class DonationComponent implements OnInit {
       const amount = donationData.amount;  // Extract the amount value
       console.log('Donation Data:', donationData);
       console.log('Donation Amount:', amount);
-
       this.donationService.createTransaction(amount).subscribe(
         (response) => {
           console.log(response);
           this.openTransactionModel(response, form);
+
         },
         (error) => console.log(error),
       );
@@ -149,6 +149,7 @@ export class DonationComponent implements OnInit {
 
 
   generatePDF(donation: Donation, response: any) {
+    const logoBase64 = '../../../assets/globTPF.png'; // Replace with your actual base64 string
     // Initialize jsPDF
     const pdfDoc = new jsPDF();
 
@@ -157,10 +158,11 @@ export class DonationComponent implements OnInit {
     const labelStyle = { fontSize: 12, fontStyle: 'bold' };
     const contentStyle = { fontSize: 12 };
 
+    pdfDoc.addImage(logoBase64, 'PNG', 10, 10, 40, 30);
+
     // Add content to the PDF
     pdfDoc.setFontSize(titleStyle.fontSize);
     pdfDoc.setFillColor(255, 0, 0); // Set fill color to red
-    pdfDoc.text('GlobTpf', 20, 20)// Set text color to red
 
     pdfDoc.setFontSize(labelStyle.fontSize);
     pdfDoc.text('Om sai nivas,Vichumbe, Navi Mumbai', 100, 20); // Position address details on the right side
@@ -169,7 +171,7 @@ export class DonationComponent implements OnInit {
     pdfDoc.line(20, 50, 190, 50); // Draw a horizontal line
 
     pdfDoc.setFontSize(titleStyle.fontSize);
-    pdfDoc.text('Donation Receipt', 105, 70, { align: 'center' });
+    pdfDoc.text('Donation Receipt', 105, 60, { align: 'center' });
 
     pdfDoc.setFontSize(labelStyle.fontSize);
     pdfDoc.text('Receipt Number:', 20, 80);
@@ -178,15 +180,20 @@ export class DonationComponent implements OnInit {
     pdfDoc.text('Address of Donor:', 20, 110);
     pdfDoc.text('Email-id of Donor:', 20, 120);
     pdfDoc.text('Contact No. of Donor:', 20, 130);
-    pdfDoc.text('Donation amout.:', 20, 140);
+    pdfDoc.text('Donation amout:', 20, 140);
     pdfDoc.text('In words:', 20, 150);
     pdfDoc.text('By mode of:', 20, 160);
-    pdfDoc.text('Eligible for deduction\'s Section:', 20, 170);
-    pdfDoc.text('Our Income Tax Unique Registration No.:', 20, 180);
+    pdfDoc.text('Eligible for Tax exemption Section:', 20, 170);
+    pdfDoc.text('Our Income Tax Unique Registration No :', 20, 180);
+
+    const date = new Date();
+    const options: any = { month: 'long', day: 'numeric', year: 'numeric' };
+    const formattedDate = date.toLocaleDateString('en-US', options); // Adjust 'en-US' as per your locale
+    console.log(formattedDate);
 
     pdfDoc.setFontSize(contentStyle.fontSize);
     pdfDoc.text(response.id.toString(), 100, 80);
-    pdfDoc.text(new Date().toLocaleDateString(), 100, 90);
+    pdfDoc.text(formattedDate, 100, 90);
     pdfDoc.text(donation.name, 100, 100);
     pdfDoc.text(donation.address, 100, 110);
     pdfDoc.text(donation.email, 100, 120);
@@ -194,20 +201,15 @@ export class DonationComponent implements OnInit {
     pdfDoc.text('Rs. ' + donation.amount + '/-', 100, 140);
     pdfDoc.text(this.convertNumberToWords(donation.amount) + " Only", 100, 150);
     pdfDoc.text('Online', 100, 160);
-    pdfDoc.text('Section 35(1)(ii)', 100, 170);
+    pdfDoc.text('80G', 100, 170);
     pdfDoc.text('ABCDEFGHIJKLMNP', 100, 180);
 
     // Add Terms & Conditions section
-    pdfDoc.setFontSize(labelStyle.fontSize);
-    pdfDoc.text('Terms & Conditions', 20, 200); // Position the title
 
     pdfDoc.setFontSize(contentStyle.fontSize);
-    pdfDoc.text('1. Cheques/DD is subject to realization', 20, 210);
-    pdfDoc.text('2. Our Registration No.: XYZ_required', 20, 220);
-    pdfDoc.text('For Glob TechPower Foundation', 20, 230);
 
-    pdfDoc.setFontSize(labelStyle.fontSize);
-    pdfDoc.text('Authorized Signatory', 180, 250, { align: 'right' }); // Position the signatory
+    pdfDoc.text('For Glob TechPower Foundation', 140, 240); // Move 50 units to the right
+
 
     // Save the PDF
     pdfDoc.save('donation_receipt.pdf');
