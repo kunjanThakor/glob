@@ -16,37 +16,37 @@ interface Testimonial {
 export class VolunteerComponent {
   testimonials: Testimonial[] = [
     {
-      image: 'src/assets/img/volunteer/jagrati.jpg',
+      image: '../../../assets/img/volunteer/volunteer.jpg',
       text: 'Clita clita tempor justo dolor ipsum amet kasd amet duo justo duo duo labore sed sed. Magna ut diam sit et amet stet eos sed clita erat magna elitr erat sit sit erat at rebum justo sea clita.',
       name: 'Jagrati Mehta',
       profession: 'Profession'
     },
     {
-      image: 'src/assets/img/volunteer/vidhya.jpg',
+      image: '../../../assets/img/volunteer/vidhya.jpg',
       text: 'Clita clita tempor justo dolor ipsum amet kasd amet duo justo duo duo labore sed sed. Magna ut diam sit et amet stet eos sed clita erat magna elitr erat sit sit erat at rebum justo sea clita.',
       name: 'Vidhya KS',
       profession: 'Profession'
     },
     {
-      image: 'src/assets/img/volunteer/karan.jpg',
+      image: '../../../assets/img/volunteer/karan.jpg',
       text: 'Clita clita tempor justo dolor ipsum amet kasd amet duo justo duo duo labore sed sed. Magna ut diam sit et amet stet eos sed clita erat magna elitr erat sit sit erat at rebum justo sea clita.',
       name: 'Karan',
       profession: 'Profession'
     },
     {
-      image: 'src/assets/img/volunteer/kunjan.jpg',
+      image: '../../../assets/img/volunteer/kunjan.jpg',
       text: 'Clita clita tempor justo dolor ipsum amet kasd amet duo justo duo duo labore sed sed. Magna ut diam sit et amet stet eos sed clita erat magna elitr erat sit sit erat at rebum justo sea clita.',
       name: 'Kunjan',
       profession: 'Profession'
     },
     {
-      image: 'assets/img/volunteer.jpg',
+      image: '../../../assets/img/volunteer/jyoti.jpg',
       text: 'Clita clita tempor justo dolor ipsum amet kasd amet duo justo duo duo labore sed sed. Magna ut diam sit et amet stet eos sed clita erat magna elitr erat sit sit erat at rebum justo sea clita.',
       name: 'Jyoti',
       profession: 'Profession'
     },
     {
-      image: 'assets/img/volunteer.jpg',
+      image: '../../../assets/img/volunteer/jhanvi.jpg',
       text: 'Clita clita tempor justo dolor ipsum amet kasd amet duo justo duo duo labore sed sed. Magna ut diam sit et amet stet eos sed clita erat magna elitr erat sit sit erat at rebum justo sea clita.',
       name: 'Janvi Yadav',
       profession: 'Profession'
