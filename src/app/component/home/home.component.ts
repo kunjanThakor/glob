@@ -10,12 +10,11 @@ import { QuoteComponent } from '../quote/quote.component';
 import { OurteamComponent } from '../ourteam/ourteam.component';
 import { VolunteerComponent } from '../volunteer/volunteer.component';
 import { NgIf } from '@angular/common';
-import { DelayedComponentComponent } from '../delayed-component/delayed-component.component';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [NgIf, RouterLink, CarouselComponent, DelayedComponentComponent, FeatureComponent, AboutComponent, ProgramComponent, ChooseComponent, PopularcausesComponent, QuoteComponent, OurteamComponent, VolunteerComponent],
+  imports: [NgIf, RouterLink, CarouselComponent, FeatureComponent, AboutComponent, ProgramComponent, ChooseComponent, PopularcausesComponent, QuoteComponent, OurteamComponent, VolunteerComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
