@@ -13,7 +13,7 @@ interface Testimonial {
   templateUrl: './volunteer.component.html',
   styleUrl: './volunteer.component.css'
 })
-export class VolunteerComponent implements OnInit, OnDestroy {
+export class VolunteerComponent {
   testimonials: Testimonial[] = [
     {
       image: 'assets/img/volunteer.jpg',
@@ -59,20 +59,4 @@ export class VolunteerComponent implements OnInit, OnDestroy {
   }
 
   intervalId: any;
-
-  startAutoSlide() {
-    this.intervalId = setInterval(() => {
-      this.next();
-    }, 3000); // Change slide every 3 seconds
-  }
-
-  ngOnInit() {
-    this.startAutoSlide();
-  }
-
-  ngOnDestroy() {
-    if (this.intervalId) {
-      clearInterval(this.intervalId);
-    }
-  }
 }
