@@ -1,11 +1,19 @@
 import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
+<<<<<<< HEAD
+import { DonationComponent } from '../donation/donation.component';
+=======
+>>>>>>> 64cfdb2953b79eb98c9a79408ae8ac76eea2a85a
 import { NgClass, NgFor } from '@angular/common';
 
 @Component({
   selector: 'app-carousel',
   standalone: true,
+<<<<<<< HEAD
+  imports: [RouterLink, DonationComponent, NgFor, NgClass],
+=======
   imports: [RouterLink, NgFor, NgClass],
+>>>>>>> 64cfdb2953b79eb98c9a79408ae8ac76eea2a85a
   templateUrl: './carousel.component.html',
   styleUrl: './carousel.component.css'
 })

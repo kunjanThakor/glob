@@ -1,0 +1,36 @@
+<div id="navbar-wrapper" [ngClass]="{'toggled': isToggled}">
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button class="navbar-toggle" type="button" (click)="toggleSidebar()">
+                    <i class="fa fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+</div>
+
+<div id="wrapper" [ngClass]="{'toggled': isToggled}">
+    <aside id="sidebar-wrapper">
+        <div class="sidebar-brand">
+            <h2>PartiCipent Dashboard</h2>
+        </div>
+        <ul class="sidebar-nav">
+            <li>
+                <a routerLink="/participent/dashboard"><i class="fa fa-home"></i>Home</a>
+            </li>
+            <li>
+                <a routerLink="/participent/reason"><i class="fa fa-solid fa-code-compare"></i>Manage Activity</a>
+            </li>
+            <li>
+                <a routerLink="/"><i class="fa fa-solid fa-arrow-right-from-bracket"></i>Log Out</a>
+            </li>
+        </ul>
+    </aside>
+    <main id="content-wrapper" class="container-fluid w-100 p-3 h-100 mx-auto">
+        <router-outlet></router-outlet>
+    </main>
+    <button class="sidebar-toggle" type="button" (click)="toggleSidebar()" *ngIf="isToggled">
+        <i class="fa fa-bars"></i>
+    </button>
+</div>

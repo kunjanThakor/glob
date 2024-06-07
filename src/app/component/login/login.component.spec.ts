@@ -10,8 +10,13 @@ describe('LoginComponent', () => {
     await TestBed.configureTestingModule({
       imports: [LoginComponent]
     })
+<<<<<<< HEAD
+      .compileComponents();
+
+=======
     .compileComponents();
     
+>>>>>>> 64cfdb2953b79eb98c9a79408ae8ac76eea2a85a
     fixture = TestBed.createComponent(LoginComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();

@@ -3,7 +3,10 @@ import { Router, RouterLink } from '@angular/router';
 import { Participant } from '../../participant';
 import { FormsModule } from '@angular/forms';
 import { ParticipantService } from '../../participant.service';
+<<<<<<< HEAD
+=======
 import emailjs, { EmailJSResponseStatus } from 'emailjs-com';
+>>>>>>> 64cfdb2953b79eb98c9a79408ae8ac76eea2a85a
 
 @Component({
   selector: 'app-login',
@@ -15,6 +18,8 @@ import emailjs, { EmailJSResponseStatus } from 'emailjs-com';
 export class LoginComponent {
   email: string = '';
   password: string = '';
+<<<<<<< HEAD
+=======
   email2: string = '';
   url: string = "http://localhost:4200/reset";
   public sendEmail(e: Event, email: string) {
@@ -49,6 +54,7 @@ export class LoginComponent {
     }
     alert("Reset Link is send to your mail")
   }
+>>>>>>> 64cfdb2953b79eb98c9a79408ae8ac76eea2a85a
 
   constructor(private services: ParticipantService, private router: Router) { }
 
@@ -58,7 +64,10 @@ export class LoginComponent {
       (participant: Participant) => {
         localStorage.setItem('username', participant.email);
         localStorage.setItem('password', this.password);
+<<<<<<< HEAD
+=======
         localStorage.setItem('role', participant.roles.toString())
+>>>>>>> 64cfdb2953b79eb98c9a79408ae8ac76eea2a85a
 
         // this.interceptor.setCredentials(this.email, this.password);
         // console.log(participant.roles.toString());
@@ -68,10 +77,15 @@ export class LoginComponent {
           this.router.navigate(['/participentMain']);
         } else if (participant && participant.roles && participant.roles.includes("ROLE_ADMIN") && participant.enabled) {
           this.router.navigate(['/admin']);
+<<<<<<< HEAD
+        } else {
+          // window.location.href="/"
+=======
         } else if (participant && participant.roles && participant.roles.includes("ROLE_ADMIN_SUPER") && participant.enabled) {
           this.router.navigate(['/admin']);
         } else {
           window.location.href = "/"
+>>>>>>> 64cfdb2953b79eb98c9a79408ae8ac76eea2a85a
           // Handle case when participant is null or roles are not as expected
           console.error('Participant or roles not as expected:', participant.roles, participant.enabled);
         }

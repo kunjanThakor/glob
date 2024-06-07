@@ -1,0 +1,21 @@
+.container-fluid {
+    height: 100vh;
+}
+
+.col-3 {
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    overflow-y: auto;
+    padding: 0;
+    color: white;
+}
+
+.col-9 {
+    padding: 20px;
+    overflow-y: auto;
+    height: 100vh;
+    margin-left: 200px;
+    /* Same width as the sidebar */
+}

@@ -1,0 +1,8 @@
+.btn{
+    border: none;
+}
+textarea{
+    resize: none;
+    border: none;
+    height: 23px;
+}

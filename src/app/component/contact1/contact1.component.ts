@@ -1,12 +1,25 @@
+<<<<<<< HEAD
+import { Component } from '@angular/core';
+import { RouterLink } from '@angular/router';
+=======
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { RouterLink } from '@angular/router';
 import emailjs, { EmailJSResponseStatus } from 'emailjs-com';
+>>>>>>> 64cfdb2953b79eb98c9a79408ae8ac76eea2a85a
 
 @Component({
   selector: 'app-contact1',
   standalone: true,
+<<<<<<< HEAD
+  imports: [RouterLink],
+  templateUrl: './contact1.component.html',
+  styleUrl: './contact1.component.css'
+})
+export class Contact1Component {
+
+=======
   imports: [RouterLink, FormsModule, CommonModule],
   templateUrl: './contact1.component.html',
   styleUrls: ['./contact1.component.css']
@@ -50,4 +63,5 @@ export class Contact1Component {
     this.subject = "";
     this.message = "";
   }
+>>>>>>> 64cfdb2953b79eb98c9a79408ae8ac76eea2a85a
 }

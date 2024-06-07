@@ -2,7 +2,10 @@ body {
     font-family: 'Roboto', sans-serif;
     background-color: #f5f5f5;
 }
+<<<<<<< HEAD
+=======
 
+>>>>>>> 64cfdb2953b79eb98c9a79408ae8ac76eea2a85a
 .login-box {
     background-color: #fff;
     padding: 40px;
@@ -11,7 +14,10 @@ body {
     margin: 5rem auto;
     max-width: 500px;
 }
+<<<<<<< HEAD
+=======
 
+>>>>>>> 64cfdb2953b79eb98c9a79408ae8ac76eea2a85a
 .login-box h1 {
     font-weight: 300;
     margin-bottom: 30px;
@@ -19,12 +25,18 @@ body {
     /* add custom class */
     color: var(--primary-color);
 }
+<<<<<<< HEAD
+=======
 
+>>>>>>> 64cfdb2953b79eb98c9a79408ae8ac76eea2a85a
 .login-box form label {
     display: block;
     margin-bottom: 10px;
 }
+<<<<<<< HEAD
+=======
 
+>>>>>>> 64cfdb2953b79eb98c9a79408ae8ac76eea2a85a
 .login-box form input[type="text"],
 .login-box form input[type="password"] {
     width: 100%;
@@ -34,7 +46,10 @@ body {
     box-sizing: border-box;
     margin-bottom: 20px;
 }
+<<<<<<< HEAD
+=======
 
+>>>>>>> 64cfdb2953b79eb98c9a79408ae8ac76eea2a85a
 .login-box form button {
     background-color: #d36984;
     color: #fff;
@@ -44,7 +59,10 @@ body {
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
+<<<<<<< HEAD
+=======
 
+>>>>>>> 64cfdb2953b79eb98c9a79408ae8ac76eea2a85a
 .login-box form button:hover {
     background-color: #d36984;
 }
