@@ -17,15 +17,20 @@ import { ProjectService } from '../../project.service';
 })
 export class AdminNavComponent implements OnInit {
   counter: number = 0;
+  isSuperAdmin: boolean = false;
   constructor(private router: Router, private participantService: ParticipantService, private pdf: ProjectService) { }
   ngOnInit(): void {
     console.log(localStorage.getItem('role'));
     if (typeof localStorage !== 'undefined') {
-      if (localStorage.getItem('role') != "ROLE_ADMIN") {
-        window.location.href = "/"
+      if (!(localStorage.getItem('role') === "ROLE_ADMIN" || localStorage.getItem('role') === "ROLE_ADMIN_SUPER")) {
+        window.location.href = "/";
+      }
+      if (localStorage.getItem('role') === "ROLE_ADMIN_SUPER") {
+        this.isSuperAdmin = true;
       }
       // Access localStorage here
     }
+
     this.participantService.getUserCount().subscribe(res => this.counter = res);
   }
 

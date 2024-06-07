@@ -53,3 +53,14 @@
     background-color: #0069d9;
     border-color: #0062cc;
 }
+
+/* add-projects.component.css */
+.spinner {
+    display: inline-block;
+    width: 2rem;
+    height: 2rem;
+    border: 0.25em solid currentColor;
+    border-right-color: transparent;
+    border-radius: 50%;
+    animation: spinner-border 0.75s linear infinite;
+}

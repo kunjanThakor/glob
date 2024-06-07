@@ -11,7 +11,7 @@ export class NewsService {
   constructor(private http: HttpClient) { }
 
   uploadNews(formData: FormData): Observable<any> {
-    const api = "http://localhost:8086/sec/uploadnews"
+    const api = "https://lucid-fulfillment-production.up.railway.app/sec/uploadnews"
     return this.http.post(api, formData);
   }
 
@@ -26,7 +26,7 @@ export class NewsService {
   }*/
 
   getLatestNews(page: number = 0, size: number = 10): Observable<News[]> {
-    const url = `http://localhost:8086/sec/latest?page=${page}&size=${size}`;
+    const url = `https://lucid-fulfillment-production.up.railway.app/sec/latest?page=${page}&size=${size}`;
     return this.http.get<News[]>(url);
   }
 }
