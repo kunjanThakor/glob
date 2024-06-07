@@ -1,4 +1,4 @@
-<p>New Requests for Admin</p>
+<p class="my-3">New Requests for Admin</p>
 <div class="card my-5">
     <div class="card-body">
         <table class="table table-bordered table-striped">
@@ -19,7 +19,8 @@
                     <td>{{ user.roles }}</td>
                     <td>
                         <button class="btn btn-primary" [innerHTML]="user.enabled ? 'Remove' : 'Approve'"
-                            (click)="approvedUser(user)"></button>
+                            (click)="approvedUser(user)">
+                        </button>
                     </td>
                 </tr>
             </tbody>

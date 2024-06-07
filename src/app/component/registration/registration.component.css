@@ -1,0 +1,46 @@
+.registration-box {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin: 5rem auto;
+    max-width: 500px;
+}
+
+.registration-box h1 {
+    font-weight: 300;
+    margin-bottom: 30px;
+    color: #d36984;
+    /* add custom class */
+    color: var(--primary-color);
+}
+
+.registration-box form label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.registration-box form input[type="text"],
+.registration-box form input[type="email"],
+.registration-box form input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+}
+
+.registration-box form button {
+    background-color: #d36984;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.registration-box form button:hover {
+    background-color: #d36984;
+}

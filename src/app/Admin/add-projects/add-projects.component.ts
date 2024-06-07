@@ -4,19 +4,32 @@ import { ProjectService } from '../../project.service';
 import { DomSanitizer } from '@angular/platform-browser';
 import { Filehandle } from '../../filehandle';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
-import { Validator, NG_VALIDATORS, AbstractControl, ValidationErrors } from '@angular/forms';
-import Swal from 'sweetalert2'
-// import { response } from 'express';
+import { FormsModule, NgForm } from '@angular/forms';
+import { AbstractControl, ValidationErrors } from '@angular/forms';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-add-projects',
   standalone: true,
   imports: [CommonModule, FormsModule],
   templateUrl: './add-projects.component.html',
-  styleUrl: './add-projects.component.css',
+  styleUrls: ['./add-projects.component.css'],
 })
 export class AddProjectsComponent {
+  loading = false; // Add a loading state
+  project: Project = {
+    title: '',
+    description: '',
+    projectDetails: {
+      startingDate: '',
+      endingDate: ''
+    }
+  };
+
+  selectedImageFile: File | null = null;
+
+  constructor(private projectService: ProjectService, private sanitizer: DomSanitizer) { }
+
   validate(control: AbstractControl): ValidationErrors | null {
     const currentDate = new Date();
     const selectedDate = new Date(control.value);
@@ -28,19 +41,13 @@ export class AddProjectsComponent {
     return null;
   }
 
-  project: Project = {
-    title: '',
-    description: '',
-    projectDetails: {
-      startingDate: '',
-      endingDate: ''
+  onSubmit(form: NgForm) {
+    if (form.invalid) {
+      return;
     }
-  }
 
-  selectedImageFile: File | null = null;
-  constructor(private projectService: ProjectService, private sanitizer: DomSanitizer) { }
+    this.loading = true; // Start loading
 
-  onSubmit() {
     // Check if starting and ending dates are not less than current date
     const currentDate = new Date();
     const startingDate = new Date(this.project.projectDetails.startingDate);
@@ -52,6 +59,7 @@ export class AddProjectsComponent {
         title: 'Oops...',
         text: 'Starting and ending dates cannot be less than the current date!',
       });
+      this.loading = false; // Stop loading
       return; // Stop form submission
     }
 
@@ -62,6 +70,7 @@ export class AddProjectsComponent {
         title: 'Oops...',
         text: 'Title and description fields cannot be empty!',
       });
+      this.loading = false; // Stop loading
       return; // Stop form submission
     }
 
@@ -74,6 +83,7 @@ export class AddProjectsComponent {
           text: 'Project Added',
           icon: 'success'
         });
+        this.loading = false; // Stop loading
       },
       error => {
         Swal.fire({
@@ -81,14 +91,15 @@ export class AddProjectsComponent {
           title: 'Oops...',
           text: error.message,
         });
+        this.loading = false; // Stop loading
       }
     );
   }
 
   preparedFormData(project: Project): FormData {
     const formData = new FormData();
-    formData.append('project', new Blob([JSON.stringify(project)], { type: 'application/json' })); // Convert to JSON string
-    formData.append('projectdetail', new Blob([JSON.stringify(project.projectDetails)], { type: 'application/json' })); // Convert to JSON string
+    formData.append('project', new Blob([JSON.stringify(project)], { type: 'application/json' }));
+    formData.append('projectdetail', new Blob([JSON.stringify(project.projectDetails)], { type: 'application/json' }));
 
     if (project.projectImage) {
       formData.append('image', project.projectImage.file, project.projectImage.file.name);
@@ -110,9 +121,5 @@ export class AddProjectsComponent {
       this.selectedImageFile = fileHandle.file;
       this.project.projectImage = fileHandle;
     }
-  }
-
-  alert() {
-    alert("ntm");
   }
 }

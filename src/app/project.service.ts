@@ -11,44 +11,44 @@ export class ProjectService {
   constructor(private http: HttpClient) { }
 
   addProject(formdata: FormData): Observable<any> {
-    const api = "http://localhost:8086/sec/addprojects";
+    const api = "https://lucid-fulfillment-production.up.railway.app/sec/addprojects";
     return this.http.post(api, formdata);
   }
 
   getAllProjects(): Observable<Project[]> {
-    const api = "http://localhost:8086/sec/getAllProjects";
+    const api = "https://lucid-fulfillment-production.up.railway.app/sec/getAllProjects";
     return this.http.get<Project[]>(api);
   }
 
   deleteById(project: Project): Observable<any> {
-    const api = `http://localhost:8086/sec/deletebyid`;
+    const api = `https://lucid-fulfillment-production.up.railway.app/sec/deletebyid`;
     const id = project.id
     const body = id
 
     return this.http.post(api, body);
   }
   getPdf(): Observable<Blob> {
-    const api = "http://localhost:8086/api/v2/getPdf";
+    const api = "https://lucid-fulfillment-production.up.railway.app/api/v2/getPdf";
     return this.http.get(api, { responseType: 'blob' });
   }
 
   updateData(proj: Project): Observable<any> {
-    const api = "http://localhost:8086/sec/update";
+    const api = "https://lucid-fulfillment-production.up.railway.app/sec/update";
     return this.http.post(api, proj)
   }
 
   uploadFile(video: FormData): Observable<any> {
-    return this.http.post("http://localhost:8086/sec/uploadvideo", video);
+    return this.http.post("https://lucid-fulfillment-production.up.railway.app/sec/uploadvideo", video);
   }
 
-  private apiUrl = 'http://localhost:8086/sec/showvideo';
+  private apiUrl = 'https://lucid-fulfillment-production.up.railway.app/sec/showvideo';
 
   getVideos(): Observable<any> {
     return this.http.get<any>(this.apiUrl);
   }
 
   deleteVideo(id: number): Observable<any> {
-    const apiUrl = 'http://localhost:8086/sec/deletevideo';
+    const apiUrl = 'https://lucid-fulfillment-production.up.railway.app/sec/deletevideo';
     const body = { id }
     return this.http.post<any>(apiUrl, body);
   }
