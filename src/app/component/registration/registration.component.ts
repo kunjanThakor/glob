@@ -28,9 +28,16 @@ export class RegistrationComponent implements OnInit {
   }
   onSubmit() {
     this.particpentService.addParticpent(this.particpiant).subscribe(response => alert("Data Added"), err => console.log(err)
+<<<<<<< HEAD
     
     
     )
   }
+=======
+
+
+    )
+  }
+>>>>>>> 64cfdb2953b79eb98c9a79408ae8ac76eea2a85a
 
 }

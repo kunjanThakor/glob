@@ -1,0 +1,75 @@
+/* src/app/video-list/video-list.component.css */
+
+/* Each video item container */
+.video-item {
+    background-color: #f9f9f9;
+    /* Light background color for each video item */
+    border: 1px solid #ddd;
+    /* Border around each video item */
+    border-radius: 8px;
+    /* Rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    /* Subtle shadow for depth */
+    padding: 10px;
+    /* Padding inside each video item */
+    text-align: center;
+    /* Center the text inside each video item */
+    margin-bottom: 20px;
+    /* Space below each video item */
+}
+
+/* Video element */
+.video {
+    border-radius: 8px;
+    /* Match the border radius of the container */
+    max-width: 100%;
+    /* Ensure video does not overflow its container */
+    height: auto;
+    /* Maintain aspect ratio */
+}
+
+/* Video name text */
+.video-name {
+    font-size: 16px;
+    /* Font size for video name */
+    font-weight: bold;
+    /* Bold font for video name */
+    margin-top: 10px;
+    /* Space above the video name */
+    color: #333;
+    /* Dark text color */
+}
+
+.video-item {
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+}
+
+.video-name {
+    margin-top: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.spinner-border {
+    width: 3rem;
+    height: 3rem;
+    border-width: 0.3rem;
+}
+
+.d-flex {
+    display: flex;
+}
+
+.justify-content-center {
+    justify-content: center;
+}
+
+.align-items-center {
+    align-items: center;
+}

@@ -1,11 +1,16 @@
+<<<<<<< HEAD
 import { Component, OnInit } from '@angular/core';
 import { GallaryService } from '../../gallary.service';
 import { Gallary } from '../../gallary';
 import { NgFor } from '@angular/common';
+=======
+import { Component } from '@angular/core';
+>>>>>>> 64cfdb2953b79eb98c9a79408ae8ac76eea2a85a
 
 @Component({
   selector: 'app-gallery',
   standalone: true,
+<<<<<<< HEAD
   imports: [NgFor],
   templateUrl: './gallery.component.html',
   styleUrl: './gallery.component.css'
@@ -44,5 +49,12 @@ export class GalleryComponent implements OnInit {
     return `${this.imageUrlPrefix}${imageId}`;
   }
 
+=======
+  imports: [],
+  templateUrl: './gallery.component.html',
+  styleUrl: './gallery.component.css'
+})
+export class GalleryComponent {
+>>>>>>> 64cfdb2953b79eb98c9a79408ae8ac76eea2a85a
 
 }

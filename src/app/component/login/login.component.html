@@ -3,8 +3,16 @@
     <form #loginForm="ngForm" (ngSubmit)="onSubmit()">
         <label for="username">Username:</label>
         <input type="text" id="username" name="username" name="username" [(ngModel)]="email" required>
+<<<<<<< HEAD
         <label for="password" >Password:</label>
         <input type="password" id="password" name="password" name="password" [(ngModel)]="password" required>
+=======
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" name="password" [(ngModel)]="password" required>
+        <a routerLink="/login" (click)="saveEmail($event)">Forgot Password</a>
+        <br>
+        <br>
+>>>>>>> 64cfdb2953b79eb98c9a79408ae8ac76eea2a85a
         <button type="submit">Login</button>
     </form>
 </div>

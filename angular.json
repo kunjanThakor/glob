@@ -25,6 +25,7 @@
               "src/assets"
             ],
             "styles": [
+<<<<<<< HEAD
               "src/styles.css",
               "node_modules/owl.carousel/dist/assets/owl.carousel.min.css",
               "node_modules/owl.carousel/dist/assets/owl.theme.default.min.css",
@@ -38,15 +39,29 @@
             "scripts": [
               "node_modules/jquery/dist/jquery.min.js",
               "node_modules/owl.carousel/dist/owl.carousel.min.js",
+=======
+              "@angular/material/prebuilt-themes/indigo-pink.css",
+              "src/assets/lib/animate/animate.min.css",
+              "src/assets/lib/owlcarousel/assets/owl.carousel.min.css",
+              "src/assets/lib/lightbox/css/lightbox.min.css",
+              "src/assets/css/bootstrap.min.css",
+              "src/assets/css/style.css"
+            ],
+            "scripts": [
+>>>>>>> 64cfdb2953b79eb98c9a79408ae8ac76eea2a85a
               "src/assets/lib/wow/wow.min.js",
               "src/assets/lib/easing/easing.min.js",
               "src/assets/lib/waypoints/waypoints.min.js",
               "src/assets/lib/counterup/counterup.min.js",
               "src/assets/lib/isotope/isotope.pkgd.min.js",
               "src/assets/lib/lightbox/js/lightbox.min.js",
+<<<<<<< HEAD
               "src/assets/js/main.js",
               "node_modules/jquery/dist/jquery.min.js",
               "node_modules/owl.carousel/dist/owl.carousel.min.js"
+=======
+              "src/assets/js/main.js"
+>>>>>>> 64cfdb2953b79eb98c9a79408ae8ac76eea2a85a
             ],
             "server": "src/main.server.ts",
             "prerender": true,
@@ -56,11 +71,23 @@
           },
           "configurations": {
             "production": {
+<<<<<<< HEAD
+=======
+              "optimization": true,
+              "sourceMap": false,
+              "namedChunks": false,
+              "aot": true,
+              "extractLicenses": true,
+>>>>>>> 64cfdb2953b79eb98c9a79408ae8ac76eea2a85a
               "budgets": [
                 {
                   "type": "initial",
                   "maximumWarning": "500kb",
+<<<<<<< HEAD
                   "maximumError": "1mb"
+=======
+                  "maximumError": "6mb"
+>>>>>>> 64cfdb2953b79eb98c9a79408ae8ac76eea2a85a
                 },
                 {
                   "type": "anyComponentStyle",
@@ -109,9 +136,14 @@
               "src/assets"
             ],
             "styles": [
+<<<<<<< HEAD
               "src/styles.css",
               "node_modules/owl.carousel/dist/assets/owl.carousel.min.css",
               "node_modules/owl.carousel/dist/assets/owl.theme.default.min.css",
+=======
+              "@angular/material/prebuilt-themes/indigo-pink.css",
+              "src/styles.css",
+>>>>>>> 64cfdb2953b79eb98c9a79408ae8ac76eea2a85a
               "src/assets/lib/animate/animate.min.css",
               "src/assets/lib/lightbox/css/lightbox.min.css",
               "src/assets/css/bootstrap.min.css",
@@ -119,7 +151,10 @@
             ],
             "scripts": [
               "node_modules/jquery/dist/jquery.min.js",
+<<<<<<< HEAD
               "node_modules/owl.carousel/dist/owl.carousel.min.js",
+=======
+>>>>>>> 64cfdb2953b79eb98c9a79408ae8ac76eea2a85a
               "src/assets/lib/wow/wow.min.js",
               "src/assets/lib/easing/easing.min.js",
               "src/assets/lib/waypoints/waypoints.min.js",

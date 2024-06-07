@@ -1,0 +1,19 @@
+<div class="container">
+    <div *ngIf="isLoading" class="d-flex justify-content-center align-items-center" style="height: 100vh;">
+        <div class="spinner-border text-primary" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <div class="row" *ngIf="!isLoading">
+        <div class="col-md-4" *ngFor="let video of videos">
+            <div class="video-item">
+                <video class="video" width="100%" controls>
+                    <source [src]="'data:video/mp4;base64,' + video.picByte" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <p class="video-name">{{ video.name }}</p>
+                <button (click)="deleteVideo(video.id)" class="btn btn-danger">Delete</button>
+            </div>
+        </div>
+    </div>
+</div>
