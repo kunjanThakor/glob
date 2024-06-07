@@ -13,27 +13,5 @@ import { CampaignComponent } from '../campaign/campaign.component';
   styleUrl: './navbar.component.css'
 })
 export class NavbarComponent {
-  disable: boolean = true;
-  ngOnInit(): void {
-    if (typeof localStorage !== 'undefined' &&
-      localStorage.getItem('username') !== null &&
-      localStorage.getItem('password') !== null) {
-      this.disable = false;
-    } else {
-      this.disable = true;
-    }
-  }
 
-  openModel() {
-    const modelDiv = document.getElementById('myModal');
-    if (modelDiv != null) {
-      modelDiv.style.display = 'block';
-    }
-  }
-  closeModel() {
-    const modelDiv = document.getElementById('myModal');
-    if (modelDiv != null) {
-      modelDiv.style.display = 'none';
-    }
-  }
 }
