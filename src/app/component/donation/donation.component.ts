@@ -202,7 +202,7 @@ export class DonationComponent implements OnInit {
     pdfDoc.text(this.convertNumberToWords(donation.amount) + " Only", 100, 150);
     pdfDoc.text('Online', 100, 160);
     pdfDoc.text('80G', 100, 170);
-    pdfDoc.text('ABCDEFGHIJKLMNP', 100, 180);
+    pdfDoc.text('AAKCG9535DF20241', 100, 180);
 
     // Add Terms & Conditions section
 
